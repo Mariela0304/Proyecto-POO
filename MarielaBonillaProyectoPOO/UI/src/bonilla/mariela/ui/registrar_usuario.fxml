@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pgRegistroUs" prefHeight="655.0" prefWidth="812.0" style="-fx-border-color: #ffb142; -fx-background-color: #f7f1e3;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.RegistrarUsuarioController">
+   <children>
+      <Label layoutX="241.0" layoutY="34.0" prefHeight="69.0" prefWidth="346.0" text="Registro de usuario" textAlignment="CENTER" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="41.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="196.0" layoutY="103.0" prefHeight="4.0" prefWidth="418.0" style="-fx-background-color: #bf6000;" />
+      <AnchorPane fx:id="paso1" focusTraversable="true" layoutX="4.0" layoutY="118.0" prefHeight="532.0" prefWidth="804.0">
+         <children>
+            <Label layoutX="176.0" layoutY="148.0" prefHeight="44.0" prefWidth="454.0" text="Debe de seleccionar el tipo de usuario con el que desea registrarse" wrapText="true">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rbColeccionista" layoutX="510.0" layoutY="240.0" mnemonicParsing="false" onAction="#onRadioUsuarioCambio" text="Coleccionista">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="rbVendedor" layoutX="203.0" layoutY="240.0" mnemonicParsing="false" onAction="#onRadioUsuarioCambio" selected="true" text="Vendedor">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <Label layoutX="127.0" layoutY="266.0" prefHeight="103.0" prefWidth="239.0" text="Si usted marca la opción de vendedor, se debe aclarar que sólo podrá subastar ítems, sin poder ser participante comprador en estas ." wrapText="true" />
+            <Label layoutX="471.0" layoutY="267.0" prefHeight="84.0" prefWidth="239.0" text="Si usted marca la opción de coleccionista, se debe aclarar que puede vender como comprar ítems subastados. " wrapText="true" />
+            <ImageView fx:id="nextPaso2" fitHeight="25.0" fitWidth="25.0" layoutX="769.0" layoutY="485.0" onMouseClicked="#onSegundoPaso">
+               <image>
+                  <Image url="@../images/circled_chevron_right_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="683.0" layoutY="488.0" text="Siguiente paso" />
+            <Label layoutX="123.0" layoutY="54.0" prefHeight="56.0" prefWidth="559.0" text="Para poder realizar su registro dentro de la aplicación, por favor complete este formulario con todos los datos solicitados." wrapText="true">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="488.0" text="Volver al menú" />
+            <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="18.0" layoutY="484.0">
+               <image>
+                  <Image url="@../images/home_filled_24px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_volverMenuP2" focusTraversable="false" layoutX="10.0" layoutY="474.0" mnemonicParsing="false" onAction="#irMenuInicio" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: none;" textFill="TRANSPARENT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paso2" focusTraversable="true" layoutX="3.0" layoutY="92.0" prefHeight="558.0" prefWidth="806.0" visible="false">
+         <children>
+            <Label layoutX="86.0" layoutY="31.0" prefHeight="19.0" prefWidth="153.0" text="Nombre completo">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_nombre" layoutX="86.0" layoutY="51.0" prefHeight="25.0" prefWidth="259.0" />
+            <ComboBox fx:id="tipoIdentificacion" layoutX="80.0" layoutY="127.0" prefHeight="25.0" prefWidth="109.0" promptText="Tipo" />
+            <Label layoutX="86.0" layoutY="95.0" prefHeight="37.0" prefWidth="97.0" text="Identificación">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_id" layoutX="199.0" layoutY="126.0" prefHeight="25.0" prefWidth="146.0" />
+            <Label layoutX="86.0" layoutY="187.0" text="Fecha de nacimiento">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="select_fecha" layoutX="86.0" layoutY="210.0" onAction="#calcularEdad" prefHeight="25.0" prefWidth="259.0" promptText="Fecha de nacimiento" />
+            <Label layoutX="86.0" layoutY="279.0" prefHeight="17.0" prefWidth="97.0" text="Edad">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_edad" editable="false" layoutX="86.0" layoutY="304.0" prefHeight="25.0" prefWidth="259.0" />
+            <Label layoutX="475.0" layoutY="25.0" prefHeight="15.0" prefWidth="177.0" text="Dirección">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="provincias" layoutX="475.0" layoutY="77.0" onAction="#onComboProvinciaCambio" prefHeight="25.0" prefWidth="259.0" promptText="-- Seleccione una provincia --" />
+            <ComboBox fx:id="cantones" disable="true" layoutX="475.0" layoutY="139.0" onAction="#onComboCantonCambio" prefHeight="25.0" prefWidth="259.0" promptText="-- Seleccione un cantón --" />
+            <ComboBox fx:id="distritos" disable="true" layoutX="475.0" layoutY="207.0" prefHeight="25.0" prefWidth="259.0" promptText="-- Seleccione un distrito --" />
+            <Label layoutX="475.0" layoutY="262.0" prefHeight="15.0" prefWidth="177.0" text="Dirección exacta">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="text_direccion" layoutX="475.0" layoutY="295.0" prefHeight="56.0" prefWidth="259.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextArea>
+            <AnchorPane fx:id="intereses" layoutX="26.0" layoutY="380.0" prefHeight="131.0" prefWidth="745.0" visible="false">
+               <children>
+                  <Label layoutX="51.0" text="Interéses">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="ckbAmbientales" layoutX="30.0" layoutY="41.0" mnemonicParsing="false" text="Ambietales" />
+                  <CheckBox fx:id="ckbAnimales" layoutX="126.0" layoutY="41.0" mnemonicParsing="false" text="Animales" />
+                  <CheckBox fx:id="ckbArtesEscenicas" layoutX="222.0" layoutY="41.0" mnemonicParsing="false" text="Artes escénicas" />
+                  <CheckBox fx:id="ckbArtesPlasticas" layoutX="341.0" layoutY="41.0" mnemonicParsing="false" text="Artes plásticas" />
+                  <CheckBox fx:id="ckbArtesanales" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" text="Artesanales" />
+                  <CheckBox fx:id="ckbEscritura" layoutX="549.0" layoutY="41.0" mnemonicParsing="false" text="Escritura" />
+                  <CheckBox fx:id="ckbFotografia" layoutX="638.0" layoutY="40.0" mnemonicParsing="false" text="Fotografía" />
+                  <CheckBox fx:id="ckbHogar" layoutX="30.0" layoutY="89.0" mnemonicParsing="false" text="Hogar" />
+                  <CheckBox fx:id="ckbLectura" layoutX="126.0" layoutY="89.0" mnemonicParsing="false" text="Lectura" />
+                  <CheckBox fx:id="ckbMedicina" layoutX="223.0" layoutY="89.0" mnemonicParsing="false" text="Medicina" />
+                  <CheckBox fx:id="ckbMusica" layoutX="324.0" layoutY="89.0" mnemonicParsing="false" text="Música" />
+                  <CheckBox fx:id="ckbReligion" layoutX="408.0" layoutY="89.0" mnemonicParsing="false" text="Religión" />
+                  <CheckBox fx:id="ckbRompecabezas" layoutX="499.0" layoutY="89.0" mnemonicParsing="false" text="Rompecabezas" />
+                  <CheckBox fx:id="ckbTecnologia" layoutX="637.0" layoutY="89.0" mnemonicParsing="false" text="Tecnología" />
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="nextPaso3" fitHeight="25.0" fitWidth="25.0" layoutX="767.0" layoutY="519.0" onMouseClicked="#onTercerPaso">
+               <image>
+                  <Image url="@../images/circled_chevron_right_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="backPaso1" layoutX="14.0" layoutY="520.0" onMouseClicked="#onPrimerPaso">
+               <image>
+                  <Image url="@../images/circled_chevron_left_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="523.0" text="Paso anterior" />
+            <Label layoutX="688.0" layoutY="523.0" text="Siguiente paso" />
+            <Label fx:id="avisoNombre" layoutX="86.0" layoutY="78.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoIdentificacion" layoutX="86.0" layoutY="162.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoFecha" layoutX="86.0" layoutY="240.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoDireccion" layoutX="475.0" layoutY="326.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoEdad" layoutX="86.0" layoutY="337.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoProvincia" layoutX="475.0" layoutY="104.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoCanton" layoutX="475.0" layoutY="166.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoDistrito" layoutX="475.0" layoutY="235.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="475.0" layoutY="56.0" text="Provincia">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="475.0" layoutY="118.0" text="Cantón">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="475.0" layoutY="183.0" text="Distrito">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoIntereses" layoutX="239.0" layoutY="503.0" prefHeight="17.0" prefWidth="271.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" fx:id="paso3" layoutX="14.0" layoutY="118.0" prefHeight="532.0" prefWidth="781.0" visible="false">
+         <children>
+            <Label layoutX="104.0" layoutY="234.0" text="Correo">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="453.0" layoutY="234.0" text="Contraseña">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text_correo" layoutX="104.0" layoutY="266.0" prefHeight="25.0" prefWidth="259.0" promptText="info@outlook.com">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <PasswordField fx:id="text_contrasenna" layoutX="453.0" layoutY="266.0" prefHeight="25.0" prefWidth="259.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </PasswordField>
+            <Label layoutX="149.0" layoutY="134.0" prefHeight="37.0" prefWidth="518.0" text="Para finalizar con su registro, por favor ingrese su correo electrónico y su contraseña y dele &quot;click&quot; al botón &quot;Completar registro&quot;." wrapText="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoContrasenna" layoutX="418.0" layoutY="183.0" prefHeight="20.0" prefWidth="259.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="backPaso2" fitHeight="25.0" fitWidth="25.0" layoutY="493.0" onMouseClicked="#onSegundoPaso">
+               <image>
+                  <Image url="@../images/circled_chevron_left_24px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="497.0" text="Paso anterior" />
+            <Button layoutX="290.0" layoutY="386.0" mnemonicParsing="false" onAction="#guardarUsuario" prefHeight="44.0" prefWidth="202.0" style="-fx-background-color: #ffb142;" text="Completar registro">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="avisoCorreo" layoutX="69.0" layoutY="184.0" prefHeight="17.0" prefWidth="259.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="781.0" layoutY="17.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="17.0" layoutX="753.0" layoutY="13.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="20.0" right="3.0" top="2.0" />
+   </opaqueInsets>
+   <effect>
+      <DropShadow blurType="ONE_PASS_BOX" />
+   </effect>
+</AnchorPane>

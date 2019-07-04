@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--
+  ~ Copyright (c) 2019. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan. 
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna. 
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus. 
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu. 
+  -->
+
+<AnchorPane prefHeight="740.0" prefWidth="822.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #ffb142;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.ModificarModeradorController">
+   <children>
+      <Label layoutX="177.0" layoutY="35.0" prefHeight="68.0" prefWidth="188.0" text="Mi perfil" textAlignment="CENTER" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="49.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="misDatos" disable="true" focusTraversable="true" layoutX="11.0" layoutY="136.0" prefHeight="372.0" prefWidth="806.0">
+         <children>
+            <Label fx:id="avisoNombre" layoutX="85.0" layoutY="111.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoFecha" layoutX="85.0" layoutY="216.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoEdad" layoutX="85.0" layoutY="329.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoIntereses" layoutX="259.0" layoutY="393.0" prefHeight="17.0" prefWidth="271.0" textFill="RED" />
+            <Label fx:id="avisoContrasenna" layoutX="491.0" layoutY="281.0" prefHeight="20.0" prefWidth="259.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoCorreo" layoutX="491.0" layoutY="157.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <JFXTextField fx:id="text_nombre" focusColor="#8c4100" labelFloat="true" layoutX="85.0" layoutY="77.0" prefHeight="25.0" prefWidth="259.0" promptText="Nombre completo">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXDatePicker fx:id="select_fecha" defaultColor="#8f4d00" editable="false" layoutX="85.0" layoutY="186.0" onAction="#calcularEdad" prefHeight="25.0" prefWidth="259.0" promptText="Fecha de nacimiento" />
+            <JFXTextField fx:id="text_edad" focusColor="#8c4100" labelFloat="true" layoutX="88.0" layoutY="288.0" prefHeight="25.0" prefWidth="259.0" promptText="Edad">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="text_correo" focusColor="#8c4100" labelFloat="true" layoutX="491.0" layoutY="121.0" prefHeight="25.0" prefWidth="259.0" promptText="Correo electrónico">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="text_contrasenna" focusColor="#8c4100" labelFloat="true" layoutX="491.0" layoutY="245.0" prefHeight="25.0" prefWidth="259.0" promptText="Contraseña">
+               <font>
+                  <Font size="13.0" />
+               </font></JFXPasswordField>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="botom_cerrar" fitHeight="17.0" fitWidth="17.0" layoutX="791.0" layoutY="6.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="boton_minimizar" fitHeight="25.0" fitWidth="17.0" layoutX="763.0" layoutY="2.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btn_modificar" buttonType="RAISED" disable="true" layoutX="490.0" layoutY="603.0" onAction="#modificarUsuario" prefHeight="39.0" prefWidth="214.0" ripplerFill="#030201" style="-fx-background-color: #FF9A00;" text="Editar mi información">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="97.0" layoutY="608.0" onAction="#irMenu" prefHeight="30.0" prefWidth="136.0" ripplerFill="#835426" style="-fx-background-color: #FF9A00;" text="Volver al menú">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="17.0" layoutX="97.0" layoutY="611.0">
+         <image>
+            <Image url="@../images/left_25px.png" />
+         </image>
+      </ImageView>
+      <JFXToggleButton fx:id="togglEditarPerfil" layoutX="575.0" layoutY="47.0" onAction="#habilitarEditar" prefHeight="25.0" prefWidth="177.0" text="Editar mi perfil" toggleColor="#bf6000" toggleLineColor="#ffc289" />
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

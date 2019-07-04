@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="653.0" prefWidth="1085.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #ffb142;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.ListasModeradorUsuariosController">
+   <children>
+      <TableView fx:id="tableUsuarios" layoutX="4.0" layoutY="131.0" prefHeight="392.0" prefWidth="1078.0">
+         <columns>
+            <TableColumn fx:id="columnTipoUsuario" prefWidth="102.0" text="Tipo usuario" />
+            <TableColumn fx:id="columnNombre" minWidth="8.0" prefWidth="113.99996948242188" text="Nombre completo" />
+            <TableColumn fx:id="columnId" prefWidth="97.0" text="Identificación" />
+            <TableColumn fx:id="columnFecha" prefWidth="131.0" text="Fecha de nacimiento" />
+            <TableColumn fx:id="columnEdad" prefWidth="50.0" text="Edad" />
+            <TableColumn fx:id="columnCorreo" prefWidth="133.0" text="Correo electrónico" />
+            <TableColumn fx:id="columnProvincia" prefWidth="82.0" text="Provincia" />
+            <TableColumn fx:id="columnCanton" prefWidth="79.0" text="Cantón" />
+            <TableColumn fx:id="columnDistrito" prefWidth="89.0" text="Distrito" />
+            <TableColumn fx:id="columnDireccion" prefWidth="95.0" text="Dirección" />
+            <TableColumn fx:id="columnPuntuacion" prefWidth="78.0" text="Puntuación" />
+         </columns>
+      </TableView>
+      <Label layoutX="386.0" layoutY="25.0" prefHeight="44.0" prefWidth="313.0" text="Usuarios registrados" textAlignment="CENTER" textFill="#c96100">
+         <font>
+            <Font name="Harlow Solid Italic" size="38.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="botom_cerrar" fitHeight="17.0" fitWidth="17.0" layoutX="1054.0" layoutY="6.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="boton_minimizar" fitHeight="25.0" fitWidth="17.0" layoutX="1026.0" layoutY="2.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="118.0" layoutY="564.0" onAction="#irMenuListas" prefHeight="31.0" prefWidth="226.0" ripplerFill="BLACK" style="-fx-background-color: #FF9A00;" text="Volver al menú de listas">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="118.0" layoutY="567.0">
+         <image>
+            <Image url="@../images/left_25px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

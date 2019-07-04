@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<!--
+  ~ Copyright (c) 2019. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan. 
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna. 
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus. 
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu. 
+  -->
+
+<AnchorPane prefHeight="618.0" prefWidth="800.0" style="-fx-border-color: #0000;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.OrdenCompraController">
+   <children>
+      <Label layoutX="77.0" layoutY="116.0" prefHeight="17.0" prefWidth="120.0" text="Orden de compra N°:">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="21.0" text="Orden de compra">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla_detalle_items" layoutX="80.0" layoutY="342.0" prefHeight="200.0" prefWidth="640.0" style="-fx-border-color: #000;">
+        <columns>
+          <TableColumn fx:id="columnNombre" prefWidth="190.0" text="Item" />
+            <TableColumn fx:id="columnDescripcion" prefWidth="282.0" text="Descripción" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="2.0" right="2.0" top="4.0" />
+         </padding>
+      </TableView>
+      <JFXTextField fx:id="tarifa_total" alignment="CENTER" layoutX="563.0" layoutY="542.0" prefHeight="35.0" prefWidth="151.0" />
+      <Label layoutX="77.0" layoutY="150.0" prefHeight="19.0" prefWidth="151.0" text="Nombre de comprador:">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="197.0" prefHeight="19.0" prefWidth="171.0" text="Identificación de comprador: ">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="116.0" prefHeight="19.0" prefWidth="151.0" text="Nombre de vendedor:">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label  layoutX="437.0" layoutY="167.0" prefHeight="19.0" prefWidth="171.0" text="Identificación de vendedor: ">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="448.0" layoutY="547.0" prefHeight="19.0" prefWidth="98.0" text="Total a pagar:">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_num_orden" layoutX="249.0" layoutY="117.0" prefHeight="17.0" prefWidth="138.0" />
+      <Label fx:id="posicion_nombre" alignment="TOP_LEFT" layoutX="249.0" layoutY="148.0" prefHeight="42.0" prefWidth="162.0" wrapText="true" />
+      <Label fx:id="posicion_identificacion" layoutX="257.0" layoutY="198.0" prefHeight="17.0" prefWidth="138.0" />
+      <Label layoutX="77.0" layoutY="86.0" prefHeight="19.0" prefWidth="98.0" text="Fecha de orden:">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_fecha" layoutX="228.0" layoutY="87.0" prefHeight="17.0" prefWidth="120.0" />
+      <Label fx:id="posicion_nombre_vendedor" alignment="TOP_LEFT" layoutX="594.0" layoutY="117.0" prefHeight="42.0" prefWidth="162.0" wrapText="true" />
+      <Label fx:id="posicion_id_vendedor" layoutX="608.0" layoutY="168.0" prefHeight="17.0" prefWidth="151.0" />
+      <Label layoutX="684.0" layoutY="6.0" text="CollectorsBazar">
+         <font>
+            <Font name="Harlow Solid Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="309.0" prefHeight="19.0" prefWidth="197.0" text="Detalle de la compra">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="582.0" layoutX="164.0" layoutY="280.0" startX="-100.0" />
+      <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="727.0" layoutY="47.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jfoenix-8.0.8-retrolambda">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/librerias/jfoenix-8.0.8-retrolambda.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

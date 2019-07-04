@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CBCLMBonilla:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CBCLMBonilla_jar</output-path>
+    <root id="archive" name="CBCLMBonilla.jar">
+      <element id="module-output" name="CBCLMBonilla" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../CBIUMBonilla/src/librerias/sqljdbc42.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../AccesoADatos/out/artifacts/AccesoADatos_jar/AccesoADatos.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

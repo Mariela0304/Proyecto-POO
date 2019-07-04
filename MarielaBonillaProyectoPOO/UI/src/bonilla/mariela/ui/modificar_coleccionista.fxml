@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="740.0" prefWidth="822.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #ffb142;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.ControllerModificarColeccionista">
+   <children>
+      <Label layoutX="226.0" layoutY="23.0" prefHeight="68.0" prefWidth="188.0" text="Mi perfil" textAlignment="CENTER" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="49.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="misDatos" disable="true" focusTraversable="true" layoutX="11.0" layoutY="98.0" prefHeight="519.0" prefWidth="806.0">
+         <children>
+            <Label layoutX="442.0" layoutY="43.0" prefHeight="15.0" prefWidth="177.0" text="Dirección">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="intereses" focusTraversable="true" layoutX="22.0" layoutY="410.0" prefHeight="131.0" prefWidth="745.0">
+               <children>
+                  <Label layoutX="51.0" text="Interéses">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="ckbAmbientales" layoutX="30.0" layoutY="41.0" mnemonicParsing="false" text="Ambietales" />
+                  <CheckBox fx:id="ckbAnimales" layoutX="126.0" layoutY="41.0" mnemonicParsing="false" text="Animales" />
+                  <CheckBox fx:id="ckbArtesEscenicas" layoutX="222.0" layoutY="41.0" mnemonicParsing="false" text="Artes escénicas" />
+                  <CheckBox fx:id="ckbArtesPlasticas" layoutX="341.0" layoutY="41.0" mnemonicParsing="false" text="Artes plásticas" />
+                  <CheckBox fx:id="ckbArtesanales" layoutX="450.0" layoutY="41.0" mnemonicParsing="false" text="Artesanales" />
+                  <CheckBox fx:id="ckbEscritura" layoutX="549.0" layoutY="41.0" mnemonicParsing="false" text="Escritura" />
+                  <CheckBox fx:id="ckbFotografia" layoutX="638.0" layoutY="40.0" mnemonicParsing="false" text="Fotografía" />
+                  <CheckBox fx:id="ckbHogar" layoutX="30.0" layoutY="89.0" mnemonicParsing="false" text="Hogar" />
+                  <CheckBox fx:id="ckbLectura" layoutX="126.0" layoutY="89.0" mnemonicParsing="false" text="Lectura" />
+                  <CheckBox fx:id="ckbMedicina" layoutX="223.0" layoutY="89.0" mnemonicParsing="false" text="Medicina" />
+                  <CheckBox fx:id="ckbMusica" layoutX="324.0" layoutY="89.0" mnemonicParsing="false" text="Música" />
+                  <CheckBox fx:id="ckbReligion" layoutX="408.0" layoutY="89.0" mnemonicParsing="false" text="Religión" />
+                  <CheckBox fx:id="ckbRompecabezas" layoutX="499.0" layoutY="89.0" mnemonicParsing="false" text="Rompecabezas" />
+                  <CheckBox fx:id="ckbTecnologia" layoutX="637.0" layoutY="89.0" mnemonicParsing="false" text="Tecnología" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="avisoNombre" layoutX="86.0" layoutY="78.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoFecha" layoutX="86.0" layoutY="151.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoDireccion" layoutX="474.0" layoutY="342.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoEdad" layoutX="86.0" layoutY="219.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoProvincia" layoutX="475.0" layoutY="104.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoCanton" layoutX="475.0" layoutY="166.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoDistrito" layoutX="475.0" layoutY="235.0" prefHeight="17.0" prefWidth="259.0" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoIntereses" layoutX="259.0" layoutY="393.0" prefHeight="17.0" prefWidth="271.0" textFill="RED" />
+            <Label fx:id="avisoContrasenna" layoutX="86.0" layoutY="361.0" prefHeight="20.0" prefWidth="259.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="avisoCorreo" layoutX="86.0" layoutY="284.0" prefHeight="17.0" prefWidth="259.0" textFill="RED" />
+            <JFXTextField fx:id="text_nombre" focusColor="#8c4100" labelFloat="true" layoutX="86.0" layoutY="51.0" prefHeight="25.0" prefWidth="259.0" promptText="Nombre completo" />
+            <JFXDatePicker fx:id="select_fecha" defaultColor="#8f4d00" editable="false" layoutX="86.0" layoutY="121.0" onAction="#calcularEdad" prefHeight="25.0" prefWidth="259.0" promptText="Fecha de nacimiento" />
+            <JFXTextField fx:id="text_edad" focusColor="#8c4100" labelFloat="true" layoutX="89.0" layoutY="178.0" prefHeight="25.0" prefWidth="259.0" promptText="Edad" />
+            <JFXTextField fx:id="text_correo" focusColor="#8c4100" labelFloat="true" layoutX="86.0" layoutY="240.0" prefHeight="25.0" prefWidth="259.0" promptText="Correo electrónico" />
+            <JFXPasswordField fx:id="text_contrasenna" focusColor="#8c4100" labelFloat="true" layoutX="86.0" layoutY="321.0" prefHeight="25.0" prefWidth="259.0" promptText="Contraseña" />
+            <JFXComboBox fx:id="provincias" focusColor="#8c4100" labelFloat="true" layoutX="475.0" layoutY="74.0" onAction="#onComboProvinciaCambio" prefHeight="25.0" prefWidth="259.0" promptText="Provincia" />
+            <JFXComboBox fx:id="cantones" disable="true" editable="true" focusColor="#8c4100" labelFloat="true" layoutX="475.0" layoutY="134.0" onAction="#onComboCantonCambio" prefHeight="25.0" prefWidth="259.0" promptText="Cantón" />
+            <JFXComboBox fx:id="distritos" disable="true" editable="true" focusColor="#8c4100" labelFloat="true" layoutX="478.0" layoutY="207.0" prefHeight="25.0" prefWidth="259.0" promptText="Distrito" />
+            <JFXTextArea fx:id="text_direccion" focusColor="#8c4100" labelFloat="true" layoutX="477.0" layoutY="283.0" prefHeight="56.0" prefWidth="259.0" promptText="Dirección exacta" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="botom_cerrar" fitHeight="17.0" fitWidth="17.0" layoutX="791.0" layoutY="6.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="boton_minimizar" fitHeight="25.0" fitWidth="17.0" layoutX="763.0" layoutY="2.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btn_modificar" buttonType="RAISED" disable="true" layoutX="517.0" layoutY="655.0" onAction="#modificarUsuario" prefHeight="39.0" prefWidth="214.0" ripplerFill="#030201" style="-fx-background-color: #FF9A00;" text="Editar mi información">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="129.0" layoutY="660.0" onAction="#irMenu" prefHeight="30.0" prefWidth="136.0" ripplerFill="#835426" style="-fx-background-color: #FF9A00;" text="Volver al menú">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="17.0" layoutX="129.0" layoutY="663.0">
+         <image>
+            <Image url="@../images/left_25px.png" />
+         </image>
+      </ImageView>
+      <JFXToggleButton fx:id="togglEditarPerfil" layoutX="575.0" layoutY="47.0" onAction="#habilitarEditar" prefHeight="25.0" prefWidth="177.0" text="Editar mi perfil" toggleColor="#bf6000" toggleLineColor="#ffc289" />
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

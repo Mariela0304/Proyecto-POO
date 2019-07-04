@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AccesoADatos">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/librerías/AccesoADatos.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

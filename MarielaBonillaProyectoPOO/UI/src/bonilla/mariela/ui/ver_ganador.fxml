@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<!--
+  ~ Copyright (c) 2019. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan. 
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna. 
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus. 
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu. 
+  -->
+
+<AnchorPane prefHeight="565.0" prefWidth="721.0" style="-fx-border-color: #ffb142; -fx-background-color: #f7f1e3;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.VerGanadorController">
+   <children>
+      <Label layoutX="205.0" layoutY="26.0" prefHeight="61.0" prefWidth="384.0" text="Ganador de la subasta" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="113.0" text="Nombre de ganador :">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_nombre" layoutX="277.0" layoutY="114.0" prefHeight="25.0" prefWidth="375.0">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="184.0" prefHeight="17.0" prefWidth="84.0" text="Dirección: ">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="233.0" text="Provincia">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="208.0" layoutY="233.0" text="Cantón">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="233.0" text="Distrito">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="68.0" layoutY="350.0" text="Dirección exacta">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_provincia" alignment="TOP_LEFT" layoutX="57.0" layoutY="289.0" prefHeight="61.0" prefWidth="105.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_canton" alignment="TOP_LEFT" layoutX="181.0" layoutY="289.0" prefHeight="71.0" prefWidth="105.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_distrito" alignment="TOP_LEFT" layoutX="308.0" layoutY="289.0" prefHeight="61.0" prefWidth="105.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="posicion_direccion" alignment="TOP_LEFT" layoutX="57.0" layoutY="406.0" prefHeight="108.0" prefWidth="139.0" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rating fx:id="rating" layoutX="476.0" layoutY="217.0" partialRating="true" prefHeight="27.0" prefWidth="176.0" rating="0.0" />
+      <JFXButton fx:id="btn_calificar" buttonType="RAISED" layoutX="477.0" layoutY="301.0" onAction="#calificarGanador" prefHeight="36.0" prefWidth="166.0" ripplerFill="#a87500" style="-fx-background-color: #FF9A00;" text="Calificar al ganador">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="aviso_calificacion" layoutX="428.0" layoutY="261.0" prefHeight="17.0" prefWidth="272.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="691.0" layoutY="6.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="17.0" layoutX="663.0" layoutY="2.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="477.0" layoutY="398.0" onAction="#volverInfoSubasta" prefHeight="36.0" prefWidth="166.0" ripplerFill="#835426" style="-fx-background-color: #FF9A00;" text="Volver a la subasta">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="477.0" layoutY="187.0" prefHeight="21.0" prefWidth="176.0" text="Puede calificar al ganador ">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

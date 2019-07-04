@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #ffb142; -fx-background-color: #f7f1e3;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.RealizarOfertaController">
+   <children>
+      <Label layoutX="62.0" layoutY="96.0" prefHeight="26.0" prefWidth="132.0" text="Precio mínimo">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font></Label>
+      <Label fx:id="posicion_precio" layoutX="62.0" layoutY="133.0" prefHeight="36.0" prefWidth="159.0">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <JFXButton fx:id="btn_ofertar" buttonType="RAISED" layoutX="373.0" layoutY="298.0" onAction="#realizarOferta" prefHeight="36.0" prefWidth="114.0" ripplerFill="#a87500" style="-fx-background-color: #FF9A00;" text="Ofertar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btn_cancelar" buttonType="RAISED" cancelButton="true" layoutX="142.0" layoutY="298.0" onAction="#cancelar" prefHeight="36.0" prefWidth="93.0" ripplerFill="#ffb649" style="-fx-background-color: #FF9A00;" text="Cancelar ">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="text_precio" focusColor="#c96b00" labelFloat="true" layoutX="170.0" layoutY="185.0" prefHeight="52.0" prefWidth="260.0" promptText="Ingrese su oferta" AnchorPane.topAnchor="185.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label layoutX="205.0" layoutY="26.0" prefHeight="61.0" prefWidth="254.0" text="Realizar oferta" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+
+     
+   </children>
+</AnchorPane>

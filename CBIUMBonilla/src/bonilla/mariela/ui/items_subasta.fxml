@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.ItemsSubastaController">
+   <children>
+      <TableView fx:id="tabla_items_subasta" layoutX="78.0" layoutY="198.0" prefHeight="234.0" prefWidth="712.0" style="-fx-border-color: #000;">
+         <columns>
+            <TableColumn fx:id="nombre_itemS" prefWidth="114.0" resizable="false" text="Nombre" />
+            <TableColumn fx:id="descripcion_itemS" prefWidth="136.0" resizable="false" text="Descripción" />
+            <TableColumn fx:id="estado_itemS" prefWidth="123.0" resizable="false" text="Estado" />
+            <TableColumn fx:id="fechaCompra_itemS" prefWidth="123.0" resizable="false" text="Fecha de compra" />
+            <TableColumn fx:id="antiguedad_itemS" prefWidth="209.0" text="Antigüedad">
+               <columns>
+                  <TableColumn fx:id="column_anno" prefWidth="75.0" resizable="false" text="Años" />
+                  <TableColumn fx:id="column_mes" prefWidth="75.0" resizable="false" text="Meses" />
+                  <TableColumn fx:id="column_dia" prefWidth="62.0" resizable="false" text="Días" />
+               </columns>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Label layoutX="281.0" layoutY="44.0" prefHeight="60.0" prefWidth="253.0" text="Items de subasta" textFill="#d68902">
+         <font>
+            <Font name="Harlow Solid Italic" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

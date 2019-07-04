@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CBCLMBonilla1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../CBCLMBonilla/out/artifacts/CBCLMBonilla_jar/CBCLMBonilla.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

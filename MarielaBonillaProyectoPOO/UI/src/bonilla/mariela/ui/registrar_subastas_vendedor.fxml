@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" focusTraversable="true" prefHeight="798.0" prefWidth="851.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #ffb142;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.RegistrarSubastasVendedorController">
+   <children>
+      <Label layoutX="307.0" layoutY="24.0" prefHeight="44.0" prefWidth="254.0" text="Registrar subasta" textAlignment="CENTER" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="33.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="63.0" layoutY="174.0" prefHeight="380.0" prefWidth="741.0">
+         <children>
+            <TableView fx:id="tabla_items_subastas" layoutX="15.0" layoutY="7.0" onMouseClicked="#mouseClicked" prefHeight="216.0" prefWidth="711.0" style="-fx-border-color: #000; -fx-background-color: #ff7f9;">
+              <columns>
+                <TableColumn fx:id="nombre_itemS" prefWidth="114.0" text="Nombre" />
+                <TableColumn fx:id="descripcion_itemS" prefWidth="136.0" text="Descripción" />
+                  <TableColumn fx:id="estado_itemS" prefWidth="123.0" text="Estado" />
+                  <TableColumn fx:id="fechaCompra_itemS" prefWidth="123.0" text="Fecha de compra" />
+                  <TableColumn fx:id="antiguedad_itemS" prefWidth="209.0" text="Antigüedad">
+                     <columns>
+                        <TableColumn fx:id="column_anno" prefWidth="75.0" text="Años" />
+                        <TableColumn fx:id="column_mes" prefWidth="75.0" text="Meses" />
+                        <TableColumn fx:id="column_dia" prefWidth="62.0" text="Días" />
+                     </columns></TableColumn>
+              </columns>
+            </TableView>
+            <AnchorPane layoutX="16.0" layoutY="284.0" prefHeight="225.0" prefWidth="711.0" style="-fx-border-color: #000;">
+               <children>
+                  <Label layoutX="14.0" layoutY="22.0" prefHeight="44.0" prefWidth="338.0" text="Inserción de ítems a la subasta" textAlignment="CENTER" textFill="#bf6000">
+                     <font>
+                        <Font name="System Italic" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn_agregar_item" buttonType="RAISED" layoutX="40.0" layoutY="106.0" onAction="#agregar_item_lista" prefHeight="30.0" prefWidth="181.0" ripplerFill="#ffd18c" style="-fx-background-color: #FF9A00;" text="Agregar ítem a la subasta">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="get_nombre_item" focusColor="#d68502" labelFloat="true" layoutX="299.0" layoutY="81.0" prefHeight="25.0" prefWidth="149.0" promptText="Nombre del ítem">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextArea fx:id="get_descripcion_item" focusColor="#d68502" labelFloat="true" layoutX="503.0" layoutY="66.0" prefHeight="44.0" prefWidth="149.0" promptText="Descripción del ítem">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXComboBox fx:id="item_estado_subasta" focusColor="#d68502" labelFloat="true" layoutX="299.0" layoutY="159.0" prefHeight="30.0" prefWidth="149.0" promptText="Estado del ítem" />
+                  <JFXDatePicker fx:id="get_fecha_compra_item" defaultColor="#d68502" editable="false" layoutX="503.0" layoutY="159.0" prefHeight="30.0" prefWidth="149.0" promptText="Fecha de compra" />
+                  <Label fx:id="avisoNombreItem" layoutX="299.0" layoutY="113.0" prefHeight="29.0" prefWidth="181.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avisoDescripcionItem" layoutX="503.0" layoutY="113.0" prefHeight="30.0" prefWidth="194.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avisoFechaCompra" layoutX="503.0" layoutY="194.0" prefHeight="25.0" prefWidth="181.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avisoEstadoItem" layoutX="299.0" layoutY="194.0" prefHeight="25.0" prefWidth="181.0" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="btn_eliminar_item" buttonType="RAISED" disable="true" layoutX="14.0" layoutY="232.0" onAction="#eliminarItemSeleccionado" prefHeight="30.0" prefWidth="181.0" ripplerFill="#ffdfaf" style="-fx-background-color: #FF9A00;" text="Eliminar ítem de la lista">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="avisoItems" layoutX="298.0" layoutY="239.0" prefHeight="17.0" prefWidth="345.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="boto_cerrar" fitHeight="17.0" fitWidth="17.0" layoutX="820.0" layoutY="10.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="boton_minimizar" fitHeight="25.0" fitWidth="17.0" layoutX="792.0" layoutY="6.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="456.0" layoutY="711.0" onAction="#registrarSubasta" prefHeight="44.0" prefWidth="181.0" ripplerFill="#ffd89e" style="-fx-background-color: #FF9A00;" text="Registrar subasta">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="select_fecha_vencimiento" defaultColor="#bb790e" editable="false" layoutX="131.0" layoutY="103.0" prefHeight="30.0" prefWidth="204.0" promptText="Fecha de vencimiento" />
+      <JFXTextField fx:id="text_precio" focusColor="#dd7200" labelFloat="true" layoutX="546.0" layoutY="101.0" prefHeight="25.0" prefWidth="204.0" promptText="Precio mínimo" text="0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton fx:id="ir_menu" buttonType="RAISED" layoutX="131.0" layoutY="718.0" onAction="#irMenu" prefHeight="30.0" prefWidth="127.0" ripplerFill="#ffd89e" style="-fx-background-color: #FF9A00;" text="Volver al menú">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="avisoFechaVencimiento" layoutX="131.0" layoutY="140.0" prefHeight="17.0" prefWidth="300.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="avisoPrecio" layoutX="551.0" layoutY="137.0" prefHeight="25.0" prefWidth="254.0" textFill="RED" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="685.0" prefWidth="1013.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #ffb142;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.ListasModeradorSubastasController">
+   <children>
+      <TableView fx:id="tabla_subastas" layoutX="48.0" layoutY="165.0" onMouseClicked="#mouseClicked" prefHeight="356.0" prefWidth="916.0">
+         <columns>
+            <TableColumn fx:id="columnFechaInicio" prefWidth="160.0" resizable="false" style="background-color: #000;" text="Fecha de subasta" />
+            <TableColumn fx:id="columnFechaVencimiento" prefWidth="172.0" resizable="false" text="Fecha de vencimiento" />
+            <TableColumn fx:id="columnTiempoFaltante" prefWidth="190.0" resizable="false" text="Tiempo restante" />
+            <TableColumn fx:id="columnCantidadItems" minWidth="8.0" prefWidth="105.0" resizable="false" text="Ítems subastados" />
+            <TableColumn fx:id="columnPrecioMinimo" prefWidth="149.0" resizable="false" text="Precio mínimo" />
+            <TableColumn fx:id="columnVendedor" prefWidth="138.0" resizable="false" text="Vendedor" />
+         </columns>
+      </TableView>
+      <Label contentDisplay="BOTTOM" layoutX="401.0" layoutY="39.0" lineSpacing="10.0" mouseTransparent="true" prefHeight="61.0" prefWidth="316.0" text="Subastas registradas" textFill="#f28212d6">
+         <font>
+            <Font name="Harlow Solid Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="botom_cerrar" fitHeight="17.0" fitWidth="17.0" layoutX="954.0" layoutY="18.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="boton_minimizar" fitHeight="25.0" fitWidth="17.0" layoutX="926.0" layoutY="14.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="137.0" layoutY="590.0" onAction="#irMenuListas" prefHeight="39.0" prefWidth="184.0" ripplerFill="#835426" style="-fx-background-color: #FF9A00;" text="Volver al menú">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font></JFXButton>
+      <ImageView layoutX="143.0" layoutY="597.0">
+         <image>
+            <Image url="@../images/left_25px.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="verItemsSubasta" onAction="#verItemsSubasta" buttonType="RAISED" disable="true" layoutX="703.0" layoutY="541.0" prefHeight="39.0" prefWidth="254.0" style="-fx-background-color: #FF9A00;" text="Ver ítems de subasta seleccionada">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="verInfoSubasta" onAction="#verInfoSubasta" buttonType="RAISED" disable="true" layoutX="463.0" layoutY="541.0" prefHeight="39.0" prefWidth="206.0" style="-fx-background-color: #FF9A00;" text="Ver información de subasta">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

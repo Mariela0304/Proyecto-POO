@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--
+  ~ Copyright (c) 2019. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<AnchorPane prefHeight="614.0" prefWidth="942.0" style="-fx-background-color: #f7f1e3; -fx-border-color: #ffb142;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bonilla.mariela.ui.AdjudicacionesPendientesController">
+   <children>
+      <Label layoutX="342.0" layoutY="29.0" prefHeight="55.0" prefWidth="259.0" text="Adjudicaciones" textFill="#bf6000">
+         <font>
+            <Font name="Harlow Solid Italic" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla_adjudicaciones" layoutX="88.0" layoutY="123.0" onMouseClicked="#mouseClickedDisponibles" prefHeight="321.0" prefWidth="767.0">
+         <columns>
+            <TableColumn fx:id="columnDetalle" prefWidth="596.0" text="Detalle" />
+            <TableColumn fx:id="columnSubasta" prefWidth="170.0" text="Identificador de subasta" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="aceptarAdjudicacion" buttonType="RAISED" disable="true" layoutX="661.0" layoutY="487.0" onAction="#aceptarAdjudicacion" prefHeight="37.0" prefWidth="224.0" style="-fx-background-color: #FF9A00;" text="Aceptar adjudicación">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="58.0" layoutY="548.0" onAction="#irMenu" prefHeight="5.0" prefWidth="188.0" ripplerFill="#835426" style="-fx-background-color: #FF9A00;" text="Volver al menú">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="58.0" layoutY="551.0">
+         <image>
+            <Image url="@../images/left_25px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="902.0" layoutY="8.0" onMouseClicked="#cerrarApp">
+         <image>
+            <Image url="@../images/equis_24px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="17.0" layoutX="874.0" layoutY="4.0" onMouseClicked="#salirVentana">
+         <image>
+            <Image url="@../images/horizontal_line_filled_15px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="39.0">
+         <image>
+            <Image url="@../images/47739112-compras-en-línea-comercio-electrónico-y-negocios-iconos-subasta-de-llamadas-telefónicas-y-de-información-signos.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
